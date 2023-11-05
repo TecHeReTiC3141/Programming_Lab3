@@ -4,16 +4,18 @@ import lab3.colors.Colors;
 
 import java.util.Objects;
 
-public class Adjective {
+public abstract class Item implements Entity {
 
-    private String name;
+    protected static String DEFAULT_NAME = "предмет";
+
+    protected String name;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Adjective adjective = (Adjective) o;
-        return Objects.equals(name, adjective.name);
+        Item item = (Item) o;
+        return Objects.equals(name, item.name);
     }
 
     @Override
@@ -21,7 +23,11 @@ public class Adjective {
         return Objects.hash(name);
     }
 
-    public Adjective(String name) {
+    public Item() {
+        this.name = DEFAULT_NAME;
+    }
+
+    public Item(String name) {
         this.name = name;
     }
 
@@ -30,6 +36,6 @@ public class Adjective {
     }
 
     public String toString() {
-        return Colors.ANSI_PURPLE + this.name + Colors.ANSI_RESET;
+        return Colors.ANSI_CYAN + this.name + Colors.ANSI_RESET;
     }
 }

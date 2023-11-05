@@ -3,11 +3,25 @@ package lab3;
 import lab3.utils.GetArrayString;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Sentence {
 
     private ArrayList<String> clauses;
     private boolean lastAnd;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Sentence sentence = (Sentence) o;
+        return lastAnd == sentence.lastAnd && Objects.equals(clauses, sentence.clauses);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(clauses, lastAnd);
+    }
 
     public Sentence() {
         this.clauses = new ArrayList<>();

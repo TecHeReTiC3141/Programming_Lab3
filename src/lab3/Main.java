@@ -2,13 +2,12 @@ package lab3;
 
 import lab3.heros.*;
 import lab3.actions.*;
+import lab3.entities.*;
 
 import java.util.ArrayList;
 
 /*
     TODO: think about implementing a class for the whole story
-    TODO: think about implementing a class for adverbs
-
 * */
 
 public class Main {
@@ -22,14 +21,16 @@ public class Main {
             addEntity(neznaika);
             addEntity(goat);
         }};
-        Action watch = new Watch(new ArrayList<String>() {{ add("фильм"); add("с середины"); }});
+        Action watch = new Watch(new ArrayList<String>() {{ add("с середины"); }});
+        watch.attachEntity(new Film());
         Action dontUnderstand = new DontUnderstand();
         dontUnderstand.addModifier(ActionModifier.NO_WAY);
         sentence1.addClause(heros1.executeActions(new ArrayList<Action>()
             {{ add(watch); add(dontUnderstand); }}));
 
         Crimes crimes = new Crimes();
-        Action steal = new Steal(new ArrayList<String>() {{ add("ценности"); }});
+        Action steal = new Steal();
+        steal.attachEntity(new Valuables());
         steal.addModifier(ActionModifier.WHERE);
         steal.addModifier(ActionModifier.WHICH);
         sentence1.addClause(crimes.executeAction(steal));
@@ -37,7 +38,8 @@ public class Main {
 
         Sentence sentence2 = new Sentence();
 
-        FindOut findOut = new FindOut(new ArrayList<String>() {{ add("этот вопрос"); }});
+        FindOut findOut = new FindOut(new ArrayList<String>() {{ add("этот"); }});
+        findOut.attachEntity(new Question());
         Want want = new Want(findOut, new ArrayList<String>() {{ add("им"); }});
         want.addModifier(ActionModifier.STILL);
         want.addModifier(ActionModifier.FOR_SOME_REASON);

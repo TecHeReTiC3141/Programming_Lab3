@@ -3,6 +3,7 @@ package lab3;
 import lab3.utils.GetArrayString;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class EntityArray implements AbleToExecute {
 
@@ -22,6 +23,19 @@ public class EntityArray implements AbleToExecute {
 
     public String getEntitiesList() {
         return GetArrayString.getArrayString(this.entities);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EntityArray that = (EntityArray) o;
+        return Objects.equals(entities, that.entities);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(entities);
     }
 
     @Override

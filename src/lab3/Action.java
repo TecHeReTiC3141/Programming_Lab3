@@ -54,13 +54,17 @@ public abstract class Action {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Action action = (Action) o;
-        return Objects.equals(modifiers, action.modifiers)
-                && Objects.equals(entities, action.entities);
+        return Objects.equals(DEFAULT_DESCRIPTION, action.DEFAULT_DESCRIPTION)
+            && Objects.equals(description, action.description)
+            && Objects.equals(modifiers, action.modifiers)
+            && Objects.equals(entities, action.entities)
+            && Objects.equals(objects, action.objects)
+            && Objects.equals(adjectives, action.adjectives);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(description, modifiers, entities);
+        return Objects.hash(DEFAULT_DESCRIPTION, description, modifiers, entities, objects, adjectives);
     }
 
     public void attachEntity(Entity object) {
