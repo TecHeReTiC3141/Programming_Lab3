@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>lab3</OriginalElement>
+  <nodes>
+    <node x="2369.4411764705883" y="598.0">lab3.actions.Must</node>
+    <node x="-218.0" y="611.5">lab3.actions.DontUnderstand</node>
+    <node x="683.0" y="652.9689826302731">lab3.EntityArray</node>
+    <node x="1840.0" y="626.0">lab3.actions.FindOut</node>
+    <node x="-247.0000000000001" y="904.4689826302731">lab3.actions.Tongue</node>
+    <node x="1506.0" y="389.5">lab3.actions.LeanOut</node>
+    <node x="766.9411764705881" y="-326.0">lab3.Action</node>
+    <node x="723.5" y="543.4689826302731">lab3.AbleToExecute</node>
+    <node x="961.9999999999999" y="904.4689826302731">lab3.heros.TV</node>
+    <node x="2235.0" y="786.0">lab3.utils.GetArrayString</node>
+    <node x="1479.0" y="598.0">lab3.actions.Want</node>
+    <node x="545.9999999999999" y="389.5">lab3.actions.Become</node>
+    <node x="320.9999999999999" y="389.5">lab3.actions.Blink</node>
+    <node x="561.9999999999999" y="904.4689826302731">lab3.heros.Shootouts</node>
+    <node x="-116.00000000000011" y="904.4689826302731">lab3.heros.Movie</node>
+    <node x="95.99999999999989" y="389.5">lab3.actions.Steal</node>
+    <node x="-234.0" y="389.5">lab3.NotAbleAction</node>
+    <node x="2109.4411764705883" y="598.0">lab3.actions.Be</node>
+    <node x="346.9999999999999" y="652.4689826302731">lab3.Hero</node>
+    <node x="1998.0" y="786.0">lab3.Sentence</node>
+    <node x="1735.0" y="786.0">lab3.Preposition</node>
+    <node x="146.9999999999999" y="904.4689826302731">lab3.heros.Fights</node>
+    <node x="1452.0" y="786.0">lab3.ActionModifier</node>
+    <node x="1228.0" y="982.0">lab3.Comparative</node>
+    <node x="-50.000000000000114" y="1022.9689826302731">lab3.colors.Colors</node>
+    <node x="3.9999999999998863" y="904.4689826302731">lab3.heros.Neznaika</node>
+    <node x="380.9999999999999" y="904.4689826302731">lab3.heros.CrimesLeader</node>
+    <node x="1062.0" y="904.4689826302731">lab3.heros.Crimes</node>
+    <node x="1264.0" y="389.5">lab3.actions.TurnOff</node>
+    <node x="1025.0" y="389.5">lab3.actions.Appear</node>
+    <node x="825.9999999999999" y="904.4689826302731">lab3.heros.Pursuits</node>
+    <node x="791.0" y="389.5">lab3.actions.Watch</node>
+    <node x="712.9999999999999" y="904.4689826302731">lab3.heros.Goat</node>
+    <node x="1164.9764267990074" y="598.0">lab3.actions.Catch</node>
+    <node x="1239.0" y="786.0">lab3.Adjective</node>
+    <node x="-247.0000000000001" y="1008.4689826302731">lab3.Main</node>
+    <node x="1752.0" y="318.0">lab3.SelfExecutableAction</node>
+    <node x="399.9999999999999" y="543.4689826302731">lab3.Entity</node>
+    <node x="269.9999999999999" y="904.4689826302731">lab3.heros.Sign</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="lab3.actions.Watch" target="lab3.Action" relationship="GENERALIZATION">
+      <point x="0.0" y="-43.5" />
+      <point x="898.0" y="293.0" />
+      <point x="923.4411764705881" y="293.0" />
+      <point x="0.0" y="297.0" />
+    </edge>
+    <edge source="lab3.heros.Fights" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="198.4999999999999" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.heros.Crimes" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="1116.0" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.actions.Must" target="lab3.SelfExecutableAction" relationship="GENERALIZATION">
+      <point x="0.0" y="-71.5" />
+      <point x="2496.4411764705883" y="573.0" />
+      <point x="1952.0" y="573.0" />
+      <point x="0.0" y="115.0" />
+    </edge>
+    <edge source="lab3.Hero" target="lab3.Entity" relationship="REALIZATION">
+      <point x="0.0" y="-101.0" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="lab3.Hero" target="lab3.AbleToExecute" relationship="REALIZATION">
+      <point x="0.0" y="-101.0" />
+      <point x="461.4999999999999" y="627.4689826302731" />
+      <point x="838.0" y="627.4689826302731" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="lab3.NotAbleAction" target="lab3.Action" relationship="GENERALIZATION">
+      <point x="-5.6843418860808015E-14" y="-43.5" />
+      <point x="-79.0" y="293.0" />
+      <point x="923.4411764705881" y="293.0" />
+      <point x="0.0" y="297.0" />
+    </edge>
+    <edge source="lab3.actions.Catch" target="lab3.SelfExecutableAction" relationship="GENERALIZATION">
+      <point x="0.0" y="-71.5" />
+      <point x="1295.4764267990074" y="573.0" />
+      <point x="1952.0" y="573.0" />
+      <point x="0.0" y="115.0" />
+    </edge>
+    <edge source="lab3.actions.DontUnderstand" target="lab3.NotAbleAction" relationship="GENERALIZATION">
+      <point x="0.0" y="-58.0" />
+      <point x="0.0" y="43.5" />
+    </edge>
+    <edge source="lab3.actions.Want" target="lab3.SelfExecutableAction" relationship="GENERALIZATION">
+      <point x="0.0" y="-71.5" />
+      <point x="1607.0" y="573.0" />
+      <point x="1952.0" y="573.0" />
+      <point x="0.0" y="115.0" />
+    </edge>
+    <edge source="lab3.heros.Goat" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="759.4999999999999" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.Comparative" target="lab3.Adjective" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="0.0" y="73.0" />
+    </edge>
+    <edge source="lab3.actions.FindOut" target="lab3.SelfExecutableAction" relationship="GENERALIZATION">
+      <point x="0.0" y="-43.5" />
+      <point x="0.0" y="115.0" />
+    </edge>
+    <edge source="lab3.actions.TurnOff" target="lab3.Action" relationship="GENERALIZATION">
+      <point x="0.0" y="-43.5" />
+      <point x="1375.0" y="293.0" />
+      <point x="923.4411764705881" y="293.0" />
+      <point x="0.0" y="297.0" />
+    </edge>
+    <edge source="lab3.actions.Blink" target="lab3.Action" relationship="GENERALIZATION">
+      <point x="0.0" y="-43.5" />
+      <point x="423.4999999999999" y="293.0" />
+      <point x="923.4411764705881" y="293.0" />
+      <point x="0.0" y="297.0" />
+    </edge>
+    <edge source="lab3.heros.CrimesLeader" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.actions.LeanOut" target="lab3.Action" relationship="GENERALIZATION">
+      <point x="1.1368683772161603E-13" y="-43.5" />
+      <point x="1619.0" y="293.0" />
+      <point x="923.4411764705881" y="293.0" />
+      <point x="0.0" y="297.0" />
+    </edge>
+    <edge source="lab3.heros.TV" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="1001.9999999999999" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.heros.Neznaika" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="65.49999999999989" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.actions.Appear" target="lab3.Action" relationship="GENERALIZATION">
+      <point x="-1.1368683772161603E-13" y="-43.5" />
+      <point x="1134.4999999999998" y="293.0" />
+      <point x="923.4411764705881" y="293.0" />
+      <point x="0.0" y="297.0" />
+    </edge>
+    <edge source="lab3.actions.Become" target="lab3.Action" relationship="GENERALIZATION">
+      <point x="0.0" y="-43.5" />
+      <point x="658.4999999999999" y="293.0" />
+      <point x="923.4411764705881" y="293.0" />
+      <point x="0.0" y="297.0" />
+    </edge>
+    <edge source="lab3.heros.Sign" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="315.4999999999999" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.heros.Pursuits" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="883.9999999999999" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.actions.Tongue" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="-191.5000000000001" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.actions.Steal" target="lab3.Action" relationship="GENERALIZATION">
+      <point x="0.0" y="-43.5" />
+      <point x="198.4999999999999" y="293.0" />
+      <point x="923.4411764705881" y="293.0" />
+      <point x="0.0" y="297.0" />
+    </edge>
+    <edge source="lab3.heros.Movie" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="-66.00000000000011" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.heros.Shootouts" target="lab3.Hero" relationship="GENERALIZATION">
+      <point x="0.0" y="-29.5" />
+      <point x="627.4999999999999" y="879.4689826302731" />
+      <point x="461.4999999999999" y="879.4689826302731" />
+      <point x="0.0" y="101.0" />
+    </edge>
+    <edge source="lab3.SelfExecutableAction" target="lab3.Action" relationship="GENERALIZATION">
+      <point x="0.0" y="-115.0" />
+      <point x="1952.0" y="293.0" />
+      <point x="923.4411764705881" y="293.0" />
+      <point x="0.0" y="297.0" />
+    </edge>
+    <edge source="lab3.EntityArray" target="lab3.AbleToExecute" relationship="REALIZATION">
+      <point x="0.0" y="-100.5" />
+      <point x="0.0" y="29.5" />
+    </edge>
+    <edge source="lab3.actions.Be" target="lab3.SelfExecutableAction" relationship="GENERALIZATION">
+      <point x="0.0" y="-71.5" />
+      <point x="2229.4411764705883" y="573.0" />
+      <point x="1952.0" y="573.0" />
+      <point x="0.0" y="115.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5566298342541438" showDependencies="false" x="645.658008933008" y="810.6055315136482" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
