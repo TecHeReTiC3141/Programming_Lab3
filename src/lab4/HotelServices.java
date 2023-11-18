@@ -101,20 +101,32 @@ public enum HotelServices {
         }
 
         public void update(MoneySpender spender) {
-            for (HotelServices serv : this.temporaryServiceLeft.keySet()) {
-                if (this.temporaryServiceLeft.get(serv) > 0) {
-                    this.temporaryServiceLeft.put(serv, this.temporaryServiceLeft.get(serv) - 1);
-                    if (this.temporaryServiceLeft.get(serv) == 0) {
-                        System.out.printf("Услуга %s закончилась%n", serv.getName());
-                        Tongue tongue = serv.new Tongue();
-                        if (tongue.pay(spender)) {
-                            this.temporaryServiceLeft.put(serv, serv.defaultTime);
-                        } else {
-                            throw new OutOfOrderException("%s будет сидеть без %s%n".formatted(spender, serv.getName()));
+
+            class StateUpdater {
+                public StateUpdater() {
+
+                }
+
+                public void proceedUpdate() {
+                    for (HotelServices serv : temporaryServiceLeft.keySet()) {
+                        if (temporaryServiceLeft.get(serv) > 0) {
+                            temporaryServiceLeft.put(serv, temporaryServiceLeft.get(serv) - 1);
+                            if (temporaryServiceLeft.get(serv) == 0) {
+                                System.out.printf("Услуга %s закончилась%n", serv.getName());
+                                Tongue tongue = serv.new Tongue();
+                                if (tongue.pay(spender)) {
+                                    temporaryServiceLeft.put(serv, serv.defaultTime);
+                                } else {
+                                    throw new OutOfOrderException("%s будет сидеть без %s%n".formatted(spender, serv.getName()));
+                                }
+                            }
                         }
                     }
                 }
             }
+
+            new StateUpdater().proceedUpdate();
+
         }
 
         public boolean isAnyTemporaryServiceActive() {
